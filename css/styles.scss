@@ -81,10 +81,16 @@ body {
 
       .btn {
         background-color: $color-gray-very-light;
-        padding: 1rem 2rem;
+        border: 2px solid $color-gray-very-light;
+        padding: 0.8rem 1.8rem;
         border-radius: 500px;
         width: fit-content;
         text-transform: capitalize;
+
+        &:hover {
+          background-color: transparent;
+          color: $color-gray-very-light;
+        }
       }
     }
   }

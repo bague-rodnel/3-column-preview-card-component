@@ -55,12 +55,17 @@ body {
 }
 .card .col .body .btn {
   background-color: #f2f2f2;
-  padding: 1rem 2rem;
+  border: 2px solid #f2f2f2;
+  padding: 0.8rem 1.8rem;
   border-radius: 500px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   text-transform: capitalize;
+}
+.card .col .body .btn:hover {
+  background-color: transparent;
+  color: #f2f2f2;
 }
 .card .sedans {
   background-color: #e38826;
