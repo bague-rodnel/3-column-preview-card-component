@@ -1,0 +1,146 @@
+@use "sass:math";
+
+@function fluid($min, $max, $minvw: 375px, $maxvw: 1440px) {
+  @return calc(
+    #{$min} + (#{math.div($max - $min, 1px)}) * ((100vw - #{$minvw}) /
+          (#{math.div($maxvw - $minvw, 1px)}))
+  );
+}
+
+$color-orange-bright: hsl(31, 77%, 52%);
+$color-cyan-dark: hsl(184, 100%, 22%);
+$color-cyan-very-dark: hsl(179, 100%, 13%);
+$color-white-a75: hsla(0, 0%, 100%, 0.75);
+$color-gray-very-light: hsl(0, 0%, 95%);
+
+$font-fam-cursive: "Big Shoulders Display", cursive;
+$font-fam-sans-serif: "Lexend Deca", sans-serif;
+$font-wt-normal: 400;
+$font-wt-bold: 700;
+$font-sz: 15px;
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  min-height: 100vh;
+  background-color: $color-gray-very-light;
+  font-size: $font-sz;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  margin: 5rem 24px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  .col {
+    height: fluid(442px, 500px);
+    padding: 48px;
+    font-family: $font-fam-sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
+
+    .heading {
+      font-family: $font-fam-cursive;
+      font-weight: $font-wt-bold;
+      font-size: 40px;
+      color: $color-gray-very-light;
+      text-transform: uppercase;
+    }
+
+    .body {
+      flex: 1;
+      font-weight: $font-wt-normal;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .text {
+        color: $color-white-a75;
+        line-height: 1.5;
+      }
+
+      .btn {
+        background-color: $color-gray-very-light;
+        padding: 1rem 2rem;
+        border-radius: 500px;
+        width: fit-content;
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  .sedans {
+    background-color: $color-orange-bright;
+
+    .btn {
+      color: $color-orange-bright;
+    }
+  }
+
+  .suvs {
+    background-color: $color-cyan-dark;
+
+    .btn {
+      color: $color-cyan-dark;
+    }
+  }
+
+  .luxury {
+    background-color: $color-cyan-very-dark;
+
+    .btn {
+      color: $color-cyan-very-dark;
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .card {
+    .col {
+      padding: 32px;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .card {
+    width: 528px;
+  }
+}
+
+@media (min-width: 992px) {
+  .card {
+    width: fit-content;
+    max-width: 920px;
+    display: flex;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
