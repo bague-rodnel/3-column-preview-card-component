@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://bague-rodnel.github.io/3-column-preview-card-component/)
+[Live View](https://bague-rodnel.github.io/3-column-preview-card-component/)
 
 ## My process
 
