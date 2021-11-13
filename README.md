@@ -22,10 +22,10 @@ Users should be able to:
 
 ### Screenshot
 
-![](./images/ss/280.JPG)
-![](./images/ss/375.JPG)
-![](./images/ss/576.JPG)
-![](./images/ss/992.JPG)
+![](./images/ss/280.JPG)\
+![](./images/ss/375.JPG)\
+![](./images/ss/576.JPG)\
+![](./images/ss/992.JPG)\
 ![](./images/ss/1440.JPG)
 
 ### Links
